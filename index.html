@@ -1,6 +1,126 @@
-<html>
-  <head><title>Just for Fun!</title></head>
-  <body>
-    <div class="content">This is just a beginning of your story</div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Stylish Page</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    /* Title */
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      position: relative;
+      animation: moveTitle 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveTitle {
+      0% { transform: translateY(0); color: #fff; }
+      50% { transform: translateY(-20px); color: #ffd700; }
+      100% { transform: translateY(0); color: #fff; }
+    }
+
+    /* Description */
+    p.description {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      line-height: 1.6;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1em;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #2575fc;
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 0.9em;
+    }
+
+    /* Floating shapes for cool effect */
+    .floating-shape {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-shape:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+    .floating-shape:nth-child(2) { top: 50%; left: 80%; animation-delay: 2s; }
+    .floating-shape:nth-child(3) { top: 70%; left: 30%; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-30px) translateX(20px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Just Trying New Things</h1>
+    <p class="description">
+      This is the first time (maybe) for me to use a code from ChatGPT dot COM, Please don't judge and enjoy the process..
+    </p>
+    <a href="https://chatgpt.com" class="btn">Explore More About ChatGPT</a>
+  </div>
+
+  <!-- Floating Shapes -->
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+
+  <footer>
+    &copy; 2025 Cool Page, Aidan Akeno. All rights reserved.
+  </footer>
+</body>
 </html>
